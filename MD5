@@ -1,0 +1,9 @@
+2ce1d943b89f4fb4f5d3973a6e505cc5 *DESCRIPTION
+df390c53434517b304ac5db487184641 *NAMESPACE
+ba61da3ac8bbf5b90247d7a566298396 *R/cca.R
+386fd0f32e06c513220a6b9d5227765e *data/cca.example.RData
+8a707ddac27ffaba1a69d5d429fd2fdb *man/cca.Rd
+8e2d14cd426b89db2fae753a6e7ef25c *man/cca.example.Rd
+5993ca06803d20df7daa8353424f5477 *man/corclass-package.Rd
+896cecb0c77d1c1de522dba363529aea *man/plot.cca.Rd
+e2501ca2f2183e30dd3736b3e5e5bf47 *man/print.cca.Rd
