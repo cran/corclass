@@ -70,7 +70,7 @@ cca <- function (dtf, filter.significance = TRUE,
 	}
 	
 	graph <- .cormat.to.igraph (cormat, absolute.value = TRUE)
-	comm <- leading.eigenvector.community(graph)
+	comm <- igraph::leading.eigenvector.community(graph)
 			
 	modules <- .separate(attr(cormat, "dtf"), comm$membership) 
 	
@@ -90,7 +90,7 @@ print.cca <- function (x, ...) {
 	}
 }
 
-plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kawai, 
+plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = igraph::layout.kamada.kawai, 
 		drop.neg.ties.for.layout = TRUE, bw = FALSE, main = NULL, file = NULL, ...) {
 	## PLOTTING FUNCTION for objects returned by cca().
 	##             It is invoked when plot () is called on an object of the "cca" class.                             
@@ -126,12 +126,12 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kaw
 	G <- .cormat.to.igraph (cormat, FALSE)
 	
 	if (drop.neg.ties.for.layout == TRUE)
-		G.forlayout <- 	delete.edges(G, E(G)[E(G)$weight < 0])	
+		G.forlayout <- 	igraph::delete.edges(G, igraph::E(G)[igraph::E(G)$weight < 0])	
 	else
 		G.forlayout <- G
 	
 	if (is.function(LAYOUT))
-		G$layout <- LAYOUT(G.forlayout, weights = E(G.forlayout)$weight)
+		G$layout <- LAYOUT(G.forlayout, weights = igraph::E(G.forlayout)$weight)
 	else
 		G$layout <- LAYOUT
 	
@@ -140,7 +140,7 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kaw
 	}
 	
 	if (bw) {
-		edge.lty <- c(2,1)[1 + (E(G)$weight > 0)]
+		edge.lty <- c(2,1)[1 + (igraph::E(G)$weight > 0)]
 		edge.color <- "black"
 		vertex.color <- "white"
 		vertex.frame.color <- "black"
@@ -148,12 +148,12 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kaw
 	}
 	else {
 		edge.lty <- 1
-		edge.color <- c(rgb(0.86,0.08,0.24,0.5), rgb(0.44,0.44,0.78,0.5))[1 + (E(G)$weight > 0)]
+		edge.color <- c(rgb(0.86,0.08,0.24,0.5), rgb(0.44,0.44,0.78,0.5))[1 + (igraph::E(G)$weight > 0)]
 		vertex.color <- rgb(1,1,1,0.7)
 		vertex.frame.color <- rgb(0.44,0.44,0.78, 1)
 		label.color <- "black"
 	}
-	edge.width <- (E(G)$weight) * 10
+	edge.width <- (igraph::E(G)$weight) * 10
 	
 	plot(G, edge.width = edge.width, edge.color = edge.color, edge.lty = edge.lty, 
 			vertex.color = vertex.color, vertex.frame.color = vertex.frame.color, 
@@ -161,8 +161,12 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kaw
 			main = main)
 	
 	if (!is.null(file)) {
-		library(Cairo)
-		CairoPDF(file)
+		if (requireNamespace("Cairo", quietly = TRUE)) {
+			Cairo::CairoPDF(file)
+		} else {
+			pdf(file)
+		}
+
 		plot(G, edge.width = edge.width, edge.color = edge.color, edge.lty = edge.lty, 
 				vertex.color = vertex.color, vertex.frame.color = vertex.frame.color, 
 				vertex.size = 20, vertex.label.color = label.color, vertex.label.cex = 0.5, 
@@ -237,7 +241,7 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kaw
 	if (absolute.value)
 		corr <- abs(corr)
 	diag(corr) <- 0
-	graph <- graph.adjacency(corr, mode="undirected", weighted = TRUE, diag = FALSE)
+	graph <- igraph::graph.adjacency(corr, mode="undirected", weighted = TRUE, diag = FALSE)
 	return(graph)
 }
 

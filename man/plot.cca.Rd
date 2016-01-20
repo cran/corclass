@@ -8,7 +8,7 @@ Plot a CCA-produced module as a network diagram. The network nodes are survey va
 This is a convenience function wrapping igraph's graphing functionality.  Writing to a file is done via the Cairo package.
 }
 \usage{
-\method{plot}{cca}(x, module.index, cutoff = 0.05, LAYOUT = layout.kamada.kawai, 
+\method{plot}{cca}(x, module.index, cutoff = 0.05, LAYOUT = igraph::layout.kamada.kawai, 
     drop.neg.ties.for.layout = TRUE, bw = FALSE, main = NULL, file = NULL, ...)
 }
 \arguments{

@@ -1,1 +1,9 @@
 exportPattern("^[[:alpha:]]+")
+importFrom("grDevices", "dev.off", "pdf", "rgb")
+importFrom("graphics", "plot")
+importFrom("stats", "cor", "qt", "var")
+importFrom("utils", "capture.output", "packageVersion")
+importFrom("igraph", "leading.eigenvector.community", "layout.kamada.kawai", "delete.edges", "E", "graph.adjacency")
+
+S3method("plot", "cca")
+S3method("print", "cca")

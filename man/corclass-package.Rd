@@ -20,8 +20,8 @@ CCA substantially improves the accuracy of the Relational Class Analysis (RCA) a
 \tabular{ll}{
 Package: \tab corclass\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2013-11-25\cr
+Version: \tab 0.11\cr
+Date: \tab 2016-01-14\cr
 License: GPL\cr
 }
 The main function is \code{\link{cca}}.  \code{\link{plot.cca}} plots the modules produced by \code{\link{cca}}.  Sample data can be accessed via data(cca.example).
@@ -36,7 +36,7 @@ Working paper available from \url{www.ocf.berkeley.edu/~andrei}.
 \keyword{ package }
 \seealso{
 This package makes heavy use of \code{\link[igraph:igraph-package]{igraph}}.\cr
-The CCA algorithm is an improvement of \code{\link[RCA:RCA-package]{RCA}}.
+The CCA algorithm is an improvement of RCA \url{http://cran.r-project.org/package=RCA}
 }
 \examples{
     data(cca.example)
