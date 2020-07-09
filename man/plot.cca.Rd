@@ -65,5 +65,8 @@ Andrei Boutyline, \email{andrei.boutyline@gmail.com}
     layout1 <- plot(res1, 1) # try out a layout ...
     layout1 <- plot(res1, 1) # ... try again
     layout1 <- plot(res1, 1) # ... until one looks good
-    plot(res1, 1, LAYOUT = layout1, file = "module1.pdf") # now save it to a file
+	
+	# Now plot the result with the chosen layout. To save image to disk, 
+	# 	replace NULL below with file name (e.g., file = "module1.pdf")
+	plot(res1, 1, LAYOUT = layout1, file = NULL)
 }

@@ -30,13 +30,12 @@ The main function is \code{\link{cca}}.  \code{\link{plot.cca}} plots the module
 Written and maintained by Andrei Boutyline, \email{andrei.boutyline@gmail.com}.
 }
 \references{
-Boutyline, Andrei. Under review. "Correlational Class Analysis Draws a More Accurate Map (Comment on Goldberg)." 
-Working paper available from \url{www.ocf.berkeley.edu/~andrei}.
+Boutyline, Andrei. 2017. "Improving the Measurement of Shared Cultural Schemas with Correlational Class Analysis: Theory and Method." Sociological Science 4:353-93. https://www.sociologicalscience.com/articles-v4-15-353/
 }
 \keyword{ package }
 \seealso{
-This package makes heavy use of \code{\link[igraph:igraph-package]{igraph}}.\cr
-The CCA algorithm is an improvement of RCA \url{http://cran.r-project.org/package=RCA}
+This package makes heavy use of \code{\link[igraph:aaa-igraph-package]{igraph}}.\cr
+The CCA algorithm is an improvement of RCA \url{https://cran.r-project.org/package=RCA}
 }
 \examples{
     data(cca.example)

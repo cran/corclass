@@ -17,9 +17,8 @@ from noisy linear transformations of the same vector.
   ..$ : chr [1:754] "1" "1" "1" "1" ...
   ..$ : NULL
 }
-\source{
-Boutyline, Andrei. Under review. "Correlational Class Analysis Draws a More Accurate Map (Comment on Goldberg)." 
-Working paper available from \url{www.ocf.berkeley.edu/~andrei}.
+\references{
+Boutyline, Andrei. 2017. "Improving the Measurement of Shared Cultural Schemas with Correlational Class Analysis: Theory and Method." Sociological Science 4:353-93. https://www.sociologicalscience.com/articles-v4-15-353/
 }
 \examples{
 data(cca.example)

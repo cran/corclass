@@ -42,11 +42,10 @@ Minimum significance cutoff.  Absolute row correlations below this value will be
 \item{modules}{For convenience, the dataframe is separated into the modules found by the algorithm. A separate dataframe for each module i can be found in modules[[i]]$dtf.  The matrix of column correlations are in modules[[i]]$cormat.  modules[[i]]$degenerate indicates whether this module contains undefined.  Note that these modules can be plotted via the S3 plot method.  See example below.}
 }
 \references{
-Boutyline, Andrei. Under review. "Correlational Class Analysis Draws a More Accurate Map (Comment on Goldberg)." 
-Working paper available from \url{www.ocf.berkeley.edu/~andrei}.
+Boutyline, Andrei. 2017. "Improving the Measurement of Shared Cultural Schemas with Correlational Class Analysis: Theory and Method." Sociological Science 4:353-93. https://www.sociologicalscience.com/articles-v4-15-353/
 }
 \author{
-Andrei Boutyline, \email{andrei.boutyline@gmail.com}.
+Andrei Boutyline, \email{aboutyl@umich.edu}.
 }
 
 \seealso{

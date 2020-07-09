@@ -249,7 +249,7 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = igraph::layout.ka
 	# separate a data frame and cormat according to the membership vector.
 	ids <- sort(unique(membership))
 	modules <- list()
-	if (class(dtf) == "matrix") {
+	if (is(dtf, "matrix")) {
 		rownames(dtf) <- NULL
 		dtf <- data.frame(dtf)
 	}
