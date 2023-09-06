@@ -5,7 +5,7 @@
 Sample data for Correlational Class Analysis.
 }
 \description{
-A randomly generated sample dataset for correlational class analysis, created using the approach described in Boutyline (under review). 
+A randomly generated sample dataset for correlational class analysis, created using the approach described in Boutyline (2017). 
 rownames(cca.example) contain the true schematic class membership for each row.  Every row belonging to one schematic class was created
 from noisy linear transformations of the same vector.  
 }

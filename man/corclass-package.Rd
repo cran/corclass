@@ -17,13 +17,6 @@ The correlational class analysis of a survey dataset produces a partition of the
 CCA substantially improves the accuracy of the Relational Class Analysis (RCA) algorithm proposed by Goldberg (2011). See Boutyline (under review) for details.
 }
 \details{
-\tabular{ll}{
-Package: \tab corclass\cr
-Type: \tab Package\cr
-Version: \tab 0.11\cr
-Date: \tab 2016-01-14\cr
-License: GPL\cr
-}
 The main function is \code{\link{cca}}.  \code{\link{plot.cca}} plots the modules produced by \code{\link{cca}}.  Sample data can be accessed via data(cca.example).
 }
 \author{

@@ -1,9 +1,9 @@
-7348e69c194777544a9005cd8ba10ab6 *DESCRIPTION
+43995d92d72d86c3c190adf05f49200d *DESCRIPTION
 2bcf5717824f6d3cb60629aefd00acab *NAMESPACE
-bb3b1f479e2aaddf17b1e1847855a09c *R/cca.R
+c0fa017735ad784a902076fec3ecfbdc *R/cca.R
 386fd0f32e06c513220a6b9d5227765e *data/cca.example.RData
 76839c710403877123009b124724da51 *man/cca.Rd
-c9be642ef9d6090813e12ba448632870 *man/cca.example.Rd
-372985278f43c6913a14c988c3a976e7 *man/corclass-package.Rd
+8e4925bb4cc636c44e0fb4b545c2475a *man/cca.example.Rd
+d613480a939833262243fd8e1ee9ca9a *man/corclass-package.Rd
 c47071906df8ae85b96de9b417977ea7 *man/plot.cca.Rd
 0b0007c68f5b546beede966ff85d222e *man/print.cca.Rd

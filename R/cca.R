@@ -53,10 +53,9 @@ cca <- function (dtf, filter.significance = TRUE,
 	#         These modules can be plotted via the S3 method below by simply calling plot(module).
 
 	
-	if (verbose) echo <- cat 
-	else echo <- c
+	if (verbose) {echo <- cat} else {echo <- c}
 		
-	if (packageVersion("igraph") < 0.7) {
+	if (packageVersion("igraph") < "0.7") {
 		warning(paste("Your igraph version is ", as.character(packageVersion("igraph")), 
 						". CCA produces more accurate results with igraph >= 0.7.\n", sep = ""))
 	}
@@ -211,7 +210,7 @@ plot.cca <- function (x, module.index, cutoff = 0.05, LAYOUT = igraph::layout.ka
 
 .filter.insignif <- function (corr, N.vars, pcutoff = 0.05) {
 	# Helper function.
-	# Filter signififances at p <= pcutoff (two-tailed).
+	# Filter significances at p <= pcutoff (two-tailed).
 	corr <- abs(corr)
 	
 	if (any(diag(corr) != 0))
